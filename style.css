@@ -1,0 +1,47 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    background: #dbe0e5;
+    color: white;
+    padding: 10px;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li {
+    margin: 0 10px;
+}
+
+.hero {
+    text-align: center;
+    padding: 60px;
+    background: #ddd;
+}
+
+.btn {
+    background: #fff9f9;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+}
+
+.service-box, .health-box, .vaccine-box {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+}
+
+footer {
+    display: flex;
+    justify-content: space-around;
+    background: #ccc;
+    padding: 20px;
+}

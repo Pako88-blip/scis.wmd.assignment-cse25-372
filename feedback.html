@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Us - Botswana Livestock Vet Clinic</title>
+    <title>Feedback - Botswana Livestock Vet Clinic</title>
     <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
@@ -13,17 +13,27 @@
     <nav>
         <a href="../index.html">Home</a>
         <a href="services.html">Services</a>
-        <a href="shop.html">Shop</a>
-        <a href="health.html">Health Tips</a>
-        <a href="about.html">About</a>
+        <a href="feedback.html">Feedback</a>
         <a href="contact.html">Contact</a>
     </nav>
 </header>
 
 <section>
-    <h2>About Us</h2>
-    <p>We are a Botswana-based veterinary clinic focused on livestock health and farmer support.</p>
-    <p>Our mission is to improve animal health and increase productivity for farmers across the country.</p>
+    <h2>Customer Feedback</h2>
+
+    <form onsubmit="return submitFeedback()">
+        
+        <label>Name:</label><br>
+        <input type="text"><br><br>
+
+        <label>Comments:</label><br>
+        <textarea></textarea><br><br>
+
+        <button type="submit">Submit</button>
+    
+    </form>
+
+    
 </section>
 
 <footer>
