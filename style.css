@@ -1,26 +1,14 @@
-body
-{
+/* GLOBAL */
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Arial, sans-serif;
 }
 
 body {
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-}
-
-/* NAVBAR */
-header {
-    height: 70px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 40px;
-    background: white;
-    border-bottom: 1px solid #ddd;
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+    color: #212529;
 }
 
 /* LOGO */
@@ -28,141 +16,153 @@ header {
     display: flex;
     align-items: center;
     gap: 10px;
-    font-size: 20px;
 }
 
 .logo img {
-    height: 40px;
+    height: 45px;
+    width: auto;
 }
 
 .logo b {
-    color: #1e90ff;
+    color: #198754;
 }
 
-/* NAV LINKS */
-nav {
-    display: flex;
-    align-items: center;
-    gap: 20px;
-}
-
-nav a {
-    text-decoration: none;
-    color: #333;
+/* NAVBAR LINKS */
+.navbar-nav .nav-link {
     font-size: 15px;
     transition: 0.3s;
+    margin-left: 10px;
 }
 
-/* HOVER EFFECT */
-nav a:hover {
-    color: #1e90ff;
+.navbar-nav .nav-link:hover {
+    color: #198754;
 }
 
-/* ACTIVE PAGE */
-nav .active {
-    border-bottom: 2px solid #1e90ff;
-    padding-bottom: 5px;
+.navbar-nav .nav-link.active {
+    color: #198754 !important;
+    font-weight: bold;
 }
 
-/* BUTTON (Book Visit) */
-nav .btn {
-    background: #1e90ff;
-    color: white;
-    padding: 6px 12px;
-    border-radius: 5px;
-}
-
-nav .btn:hover {
-    background: #187bcd;
-}
-
+/* HERO SECTION */
 .hero {
-    height: 24%;
     width: 100%;
+    overflow: hidden;
 }
 
 .hero img {
     width: 100%;
-    height: 100%;
+    height: 400px;
     object-fit: cover;
-    border-radius: 10px;
 }
 
-/* GENERAL SECTION */
+/* SECTION STYLING */
 .section {
-    padding: 60px 8%;
-    text-align: center;
-}
-
-.section.alt {
-    background: #f5f7fa;
+    padding: 70px 0;
 }
 
 .section-title {
-    font-size: 2rem;
-    margin-bottom: 30px;
-    color: #1a2a44;
+    font-size: 2.2rem;
+    font-weight: bold;
+    color: #1f3b2d;
 }
 
-/* GRID LAYOUT */
-.grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 25px;
-}
-
-/* CARD STYLE */
+/* CARD STYLING */
 .card {
-    background: white;
-    padding: 25px;
+    border: none;
     border-radius: 15px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
-    transition: 0.3s;
-    cursor: pointer;
+    transition: 0.3s ease;
 }
 
 .card:hover {
     transform: translateY(-8px);
-    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
 }
 
 .card h3 {
-    margin-bottom: 10px;
     color: #2b4a6f;
+    margin-bottom: 15px;
 }
 
-/* CTA SECTION */
-.cta {
-    background: #2b4a6f;
-    color: white;
-    text-align: center;
-    padding: 50px 20px;
+.card p {
+    color: #555;
 }
 
-.cta h3 {
-    margin-bottom: 20px;
-    font-size: 1.8rem;
-}
-
-/* BUTTON */
-.btn {
-    background: #1e88e5;
-    color: white;
-    padding: 12px 25px;
+/* BUTTONS */
+.btn-success {
+    background-color: #198754;
+    border: none;
     border-radius: 8px;
+    padding: 10px 20px;
+    transition: 0.3s;
+}
+
+.btn-success:hover {
+    background-color: #146c43;
+}
+
+/* CUSTOM BUTTON */
+.btn-custom {
+    background-color: #198754;
+    color: white;
+    border-radius: 8px;
+    padding: 12px 25px;
     text-decoration: none;
     transition: 0.3s;
 }
 
-.btn:hover {
-    background: #1565c0;
+.btn-custom:hover {
+    background-color: #146c43;
+    color: white;
+}
+
+/* CTA SECTION */
+.cta {
+    background: #198754;
+    color: white;
+}
+
+.cta h3 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+}
+
+/* FORMS */
+.form-control,
+.form-select {
+    border-radius: 8px;
+    padding: 12px;
+}
+
+textarea.form-control {
+    resize: none;
 }
 
 /* FOOTER */
 footer {
-    height: 8%;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    border-top: 1px solid #ccc;
+    background: #212529;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+
+/* ICON SPACING */
+.bi {
+    vertical-align: middle;
+}
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 768px) {
+
+    .hero img {
+        height: 250px;
+    }
+
+    .section-title {
+        font-size: 1.8rem;
+    }
+
+    .cta h3 {
+        font-size: 1.5rem;
+    }
+
 }
